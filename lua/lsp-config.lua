@@ -1,5 +1,6 @@
 local nvim_lsp = require('lspconfig')
 local lsp_signature = require('lsp_signature')
+local symbols_outline = require('symbols-outline')
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -66,6 +67,8 @@ local signature_config = {
 }
 lsp_signature.setup(signature_config)
 
+symbols_outline.setup()
+
 nvim_lsp.eslint.setup{
   capabilities = capabilities,
   on_attach = on_attach,
@@ -73,7 +76,7 @@ nvim_lsp.eslint.setup{
     debounce_text_changes = 150,
   },
   settings = {
-    nodePath = '/home/dev/.nvm/versions/v18.13.0/bin'
+    nodePath = '/home/dev/.nvm/versions/v18.14.0/bin'
   }
 }
 
@@ -93,8 +96,14 @@ nvim_lsp.pyright.setup{
 nvim_lsp.tsserver.setup{
   capabilities = capabilities,
   on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
-  }
 }
 
+nvim_lsp.intelephense.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+nvim_lsp.psalm.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+}

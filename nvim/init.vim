@@ -53,6 +53,7 @@ call dein#add('neovim/nvim-lspconfig')
 call dein#add('onsails/lspkind.nvim')
 call dein#add('ray-x/lsp_signature.nvim')
 call dein#add('saadparwaiz1/cmp_luasnip')
+call dein#add('simrat39/symbols-outline.nvim')
 
 " Grep related
 call dein#add('junegunn/fzf', { 'do': { -> fzf#install() } }) 
