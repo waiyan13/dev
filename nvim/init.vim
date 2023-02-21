@@ -77,6 +77,7 @@ call dein#add('typescript-language-server/typescript-language-server')
 " Micellaneous
 call dein#add('Pocco81/TrueZen.nvim')
 call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('vimwiki/vimwiki')
 
 " Colorschemes

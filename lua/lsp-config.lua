@@ -107,3 +107,8 @@ nvim_lsp.psalm.setup{
   capabilities = capabilities,
   on_attach = on_attach,
 }
+
+nvim_lsp.gopls.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
